@@ -1,0 +1,21 @@
+<form #ownerForm="ngForm" (ngSubmit)="submit()">
+    <label for="firstName">Nombre:</label>
+    <input type="text" class="form-control" required [(ngModel)]="owner.firstName" name="firstName" #firstName="ngModel">
+    <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+        Nombre no válido
+    </div>
+    <br>
+    <label for="lastName">Apellidos:</label>
+    <input type="text" class="form-control" required [(ngModel)]="owner.lastName" name="lastName">
+    <br>
+    <label for="telephone">Teléfono</label>
+    <input type="text" class="form-control" [(ngModel)]="owner.telephone" name="telephone">
+    <br>
+    <label for="address">Dirección:</label>
+    <input type="text" class="form-control" required [(ngModel)]="owner.address" name="address">
+    <br>
+    <label for="city">Ciudad:</label>
+    <input type="text" class="form-control" required [(ngModel)]="owner.city" name="city">
+    <br>
+    <button type="submit" class="btn btn-primary" [disabled]="!ownerForm.valid">Submit</button>
+</form>
