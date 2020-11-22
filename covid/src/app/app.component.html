@@ -1,0 +1,6 @@
+<div class="container">
+  <button class="btn btn-success" (click)="seeAll()">All</button>
+  <button class="btn btn-success" (click)="seeGlobalSpain()">Global / Spain</button>
+  <app-informacion *ngIf="showAll" [countries]="countries"></app-informacion>
+  <app-global *ngIf="showGlobalSpain" [global]="global" [spain]="spain"></app-global>
+</div>

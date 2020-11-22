@@ -1,0 +1,18 @@
+<div class="card">
+  <h5 class="card-header">Global</h5>
+  <div class="card-body">
+    <h5 class="card-title">Información</h5>
+    <p class="card-text">Confirmados: {{global.NewConfirmed}} / {{global.TotalConfirmed}}</p>
+    <p class="card-text">Muertos: {{global.NewDeaths}} / {{global.TotalDeaths}}</p>
+    <p class="card-text">Recuperados: {{global.NewRecovered}} / {{global.TotalRecovered}}</p>
+  </div>
+</div>
+<div class="card" *ngFor="let info of spain; index as i">
+    <h5 class="card-header">Spain</h5>
+    <div class="card-body">
+      <h5 class="card-title">Información</h5>
+      <p class="card-text">Confirmados: {{info.NewConfirmed}} / {{info.TotalConfirmed}}</p>
+      <p class="card-text">Muertos: {{info.NewDeaths}} / {{info.TotalDeaths}}</p>
+      <p class="card-text">Recuperados: {{info.NewRecovered}} / {{info.TotalRecovered}}</p>
+    </div>
+  </div>

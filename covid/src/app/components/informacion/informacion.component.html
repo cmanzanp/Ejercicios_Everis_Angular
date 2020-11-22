@@ -1,0 +1,9 @@
+<div class="card" *ngFor="let country of countries; index as i">
+  <h5 class="card-header">{{country.Country}}</h5>
+  <div class="card-body">
+    <h5 class="card-title">Información</h5>
+    <p class="card-text">Confirmados: {{country.NewConfirmed}} / {{country.TotalConfirmed}}</p>
+    <p class="card-text">Muertos: {{country.NewDeaths}} / {{country.TotalDeaths}}</p>
+    <p class="card-text">Recuperados: {{country.NewRecovered}} / {{country.TotalRecovered}}</p>
+  </div>
+</div>
