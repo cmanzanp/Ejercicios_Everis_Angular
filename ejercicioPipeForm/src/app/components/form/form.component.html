@@ -1,0 +1,9 @@
+<form #form="ngForm" (ngSubmit)="submit()">
+  <label for="name">Nombre:</label><br />
+  <input type="text" [(ngModel)]="name" id="name" name="name" /><br />
+  <label for="email" >Email:</label><br />
+  <input type="email" id="email" required [(ngModel)]="email" ngModel email name="email" /><br><br />
+  <input type="checkbox" required [(ngModel)]="terminos" id="terminos" name="terminos">
+  <label for="terminos">Acepto los términos y condiciones</label><br>
+  <input type="submit" [disabled]="!form.valid" value="Submit" />
+</form>
