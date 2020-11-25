@@ -1,0 +1,20 @@
+<span id="search" class="p-input-icon-left">
+  <i class="pi pi-search"></i>
+  <input type="text" pInputText placeholder="Search" [(ngModel)]="movieTitle" />
+  <p-button id="button_submit" label="Submit" (click)="submit(movieTitle)"></p-button>
+</span>
+<div *ngFor="let movie of movies; index as i">
+  <p-card [style]="{ width: '25rem', 'margin-bottom': '2em' }">
+    <h3>{{ movie.Title }}</h3>
+    <img [src]="movie.Poster" alt="">
+    <button pButton type="button" label="Ficha de película" class="p-button-help" (click)="infoFicha(movie.imdbID)"></button>
+    <div *ngIf="show">
+      <p>Title: {{ infoMovie.Title }}</p>
+      <p>Year: {{infoMovie.Year}}</p>
+      <p>Genre: {{infoMovie.Genre}}</p>
+      <p>Director: {{infoMovie.Director}}</p>
+      <p>Language: {{infoMovie.Language}}</p>
+      <p>Released: {{infoMovie.Released}}</p>
+    </div>
+  </p-card>
+</div>
